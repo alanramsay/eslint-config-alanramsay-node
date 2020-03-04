@@ -28,6 +28,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@alanramsay'
       - run: yarn install --frozen-lockfile
-      - run: yarn publish --new-version ${GITHUB_REF#"refs/tags/"} --no-git-tag-version
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
