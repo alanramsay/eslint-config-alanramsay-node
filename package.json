@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-alanramsay-node",
+  "version": "1.0.0",
+  "description": "ESLint config based on semistandard and prettier",
+  "main": ".eslintrc.js",
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "acorn": "^7.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.0.9",
+    "npm-check-updates": "^4.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-fix"
+    }
+  }
+}
