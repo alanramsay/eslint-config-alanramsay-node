@@ -48,6 +48,7 @@ jobs:
           scope: '@alanramsay'
 
       - name: Publish to GPR
+        if: steps.check.outputs.changed == 'true'
         run: |
           yarn install --frozen-lockfile
           npm publish
