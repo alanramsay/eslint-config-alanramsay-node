@@ -1,12 +1,12 @@
 {
   "name": "@alanramsay/eslint-config-alanramsay-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ESLint config based on semistandard and prettier",
   "main": ".eslintrc.js",
   "repository": {
-      "type": "git",
-      "url": "git@github.com:alanramsay/eslint-config-alanramsay-node.git"
-    },
+    "type": "git",
+    "url": "git@github.com:alanramsay/eslint-config-alanramsay-node.git"
+  },
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
@@ -38,6 +38,6 @@
     }
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
