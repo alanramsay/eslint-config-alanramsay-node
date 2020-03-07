@@ -11,4 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Lint
-      run: yarn lint
+      run: |
+        yarn install --frozen-lockfile
+        yarn lint
