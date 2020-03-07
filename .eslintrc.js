@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['standard', 'prettier', 'plugin:security/recommended'],
+  extends: ['prettier', 'plugin:security/recommended'],
   plugins: ['prettier'],
   rules: {
     'guard-for-in': 'error',
@@ -13,8 +13,7 @@ module.exports = {
       {
         singleQuote: true
       }
-    ],
-    'standard/computed-property-even-spacing': 'off'
+    ]
   },
   parser: 'babel-eslint',
   globals: {
