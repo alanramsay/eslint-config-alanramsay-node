@@ -7,15 +7,14 @@ on:
 
 jobs:
   build:
-    env:
-      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 13
-      - run: yarn install --frozen-lockfile
+          node-version: 15
+      - run: npm ci
+      - run: npm test
 
   publish-gpr:
     env:
@@ -40,14 +39,12 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         uses: actions/setup-node@v1
         with:
-          node-version: 13
+          node-version: 15
           registry-url: https://npm.pkg.github.com/
-          scope: '@alanramsay'
 
       - name: Publish to GPR
         if: steps.check.outputs.changed == 'true'
-        run: |
-          yarn install --frozen-lockfile
-          npm publish
+        - run: npm ci
+        - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
