@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: 15
       - run: npm ci
-      - run: npm test
 
   publish-gpr:
     env:
@@ -44,7 +43,8 @@ jobs:
 
       - name: Publish to GPR
         if: steps.check.outputs.changed == 'true'
-        - run: npm ci
-        - run: npm publish
+        run: |
+          npm ci
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
