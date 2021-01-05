@@ -1,6 +1,6 @@
 {
   "name": "@alanramsay/eslint-config-alanramsay-node",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "description": "ESLint config based on semistandard and prettier",
   "main": ".eslintrc.js",
   "repository": {
@@ -34,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-fix"
+      "pre-commit": "npm run lint-fix"
     }
   },
   "publishConfig": {
