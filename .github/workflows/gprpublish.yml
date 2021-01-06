@@ -17,7 +17,8 @@ jobs:
 
   publish-gpr:
     env:
-      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      GITHUB_TOKEN: ${{secrets.GPR_PAT}}
+      NODE_AUTH_TOKEN: ${{secrets.GPR_PAT}}
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -47,4 +48,5 @@ jobs:
           npm ci
           npm publish
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GPR_PAT}}
+          NODE_AUTH_TOKEN: ${{secrets.GPR_PAT}}
