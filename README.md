@@ -1,10 +1,10 @@
-# @alanramsay/eslint-config-alanramsay-node
+# eslint-config-alanramsay-node
 
 ESLint config based on prettier.
 
 ## How to install
 
-- Run `npx install-peerdeps @alanramsay/eslint-config-alanramsay-node --dev`
+- Run `npx install-peerdeps eslint-config-alanramsay-node --dev`
 
 ## How to configure
 
@@ -12,7 +12,7 @@ ESLint config based on prettier.
 
 ```js
 module.exports = {
-  extends: ['@alanramsay/eslint-config-alanramsay-node']
+  extends: ['eslint-config-alanramsay-node']
 };
 ```
 
@@ -44,13 +44,13 @@ If you are using Jest in your project, you should install the Jest plugin for ES
 
 ```js
 module.exports = {
-  extends: ['@alanramsay/eslint-config-alanramsay-node', 'plugin:jest/recommended']
+  extends: ['eslint-config-alanramsay-node', 'plugin:jest/recommended']
 };
 ```
 
 ## Configure rules for React
 
-If you are using React in your project, you should use [@alanramsay/eslint-config-alanramsay-react](https://github.com/alanramsay/eslint-config-alanramsay-react/) instead, which extends this configuration with rules for React, JSX and Jest.
+If you are using React in your project, you should use [eslint-config-alanramsay-react](https://github.com/alanramsay/eslint-config-alanramsay-react/) instead, which extends this configuration with rules for React, JSX and Jest.
 
 ## How to run
 

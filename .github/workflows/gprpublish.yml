@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,39 +14,6 @@ jobs:
         with:
           node-version: 15
       - run: npm ci
-
-  publish-gpr:
-    env:
-      GITHUB_TOKEN: ${{secrets.GPR_PAT}}
-      NODE_AUTH_TOKEN: ${{secrets.GPR_PAT}}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Check Package Version
-        id: check
-        uses: EndBug/version-check@v1.1.0
+      - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Version Update Detected
-        if: steps.check.outputs.changed == 'true'
-        run: 'echo "Version change found! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
-
-      - name: Setup Dependencies
-        if: steps.check.outputs.changed == 'true'
-        uses: actions/setup-node@v1
-        with:
-          node-version: 15
-          registry-url: https://npm.pkg.github.com/
-
-      - name: Publish to GPR
-        if: steps.check.outputs.changed == 'true'
-        run: |
-          npm ci
-          npm publish
-        env:
-          GITHUB_TOKEN: ${{secrets.GPR_PAT}}
-          NODE_AUTH_TOKEN: ${{secrets.GPR_PAT}}
+          token: ${{ secrets.NPM_TOKEN }}
