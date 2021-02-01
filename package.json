@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint": "^7.19.0",
     "husky": "^4.3.8",
-    "npm-check-updates": "^11.0.2"
+    "npm-check-updates": "^11.1.1"
   },
   "peerDependencies": {
     "eslint": "^7.19.0"
