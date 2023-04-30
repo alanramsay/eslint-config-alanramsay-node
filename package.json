@@ -11,22 +11,21 @@
   "license": "UNLICENSED",
   "dependencies": {
     "acorn": "^8.0.4",
-    "babel-eslint": "^10.0.3",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-security": "^1.4.0",
     "prettier": "^2.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.19.0",
-    "husky": "^7.0.0",
-    "npm-check-updates": "^11.0.2"
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "npm-check-updates": "^16.10.9"
   },
   "peerDependencies": {
-    "eslint": "^7.19.0"
+    "eslint": "^8.39.0"
   },
   "scripts": {
     "lint": "eslint .",

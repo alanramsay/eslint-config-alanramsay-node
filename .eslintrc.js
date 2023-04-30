@@ -16,7 +16,6 @@ module.exports = {
       }
     ]
   },
-  parser: 'babel-eslint',
   globals: {
     assert: false,
     browser: false,
